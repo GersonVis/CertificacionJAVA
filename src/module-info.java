@@ -6,4 +6,5 @@
  *
  */
 module CertificacionJAVA {
+	requires java.sql;
 }
