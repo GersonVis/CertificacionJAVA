@@ -7,18 +7,22 @@ import java.lang.StackOverflowError;
 public class Main {
 
 	public static void main(String[] args) {
-		
+			try {
+				doSomething();
+			} catch (Exception e) {
+				System.out.println("bloque catch");
+				throw new RuntimeException(e);
+			}finally {
+				System.out.println("bloque finally");
+			}
 	}
 	
-	public void doSomething() {
+	public static void doSomething() throws Exception{
 		//throw new NullPointerException();
 		//throw new StackOverflowError();
-		try {
-			throw new Exception();
-			//throw new SQLException();
-		}catch(SQLException e) {
-			
-		}
+		
+		//	throw new Exception();
+		throw new SQLException();
 		
 	}
 }
