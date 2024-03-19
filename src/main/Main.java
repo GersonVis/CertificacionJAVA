@@ -14,6 +14,7 @@ public class Main {
 				throw new RuntimeException(e);
 			}finally {
 				System.out.println("bloque finally");
+				throw new StackOverflowError();
 			}
 	}
 	
