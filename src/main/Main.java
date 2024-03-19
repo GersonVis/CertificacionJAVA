@@ -1,6 +1,7 @@
 package main;
 
 import java.sql.SQLException;
+import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -11,8 +12,15 @@ import java.lang.StackOverflowError;
 public class Main {
 
 	public static void main(String[] args) {
-			int[] numeros = new int[3];
-			numeros[4] = 10;		
+		try {
+			Scanner entrada = new Scanner(System.in);	
+			int divisor = entrada.nextInt();
+			if(divisor == 0) {
+				throw new ArithmeticException("División by zero");
+			}
+		}catch(ArithmeticException e) {
+			System.out.println("Handled exception");
+		}
 	}
 	
 	public static void doSomething() throws Exception{
