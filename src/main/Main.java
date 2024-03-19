@@ -1,21 +1,18 @@
 package main;
 
 import java.sql.SQLException;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.lang.StackOverflowError;
 
 
 public class Main {
 
 	public static void main(String[] args) {
-			try {
-				doSomething();
-			} catch (Exception e) {
-				System.out.println("bloque catch");
-				throw new RuntimeException(e);
-			}finally {
-				System.out.println("bloque finally");
-				throw new StackOverflowError();
-			}
+			int[] numeros = new int[3];
+			numeros[4] = 10;		
 	}
 	
 	public static void doSomething() throws Exception{
